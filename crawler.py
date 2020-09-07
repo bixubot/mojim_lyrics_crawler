@@ -4,8 +4,8 @@ import requests
 from bs4 import BeautifulSoup
 
 ROOT = "https://mojim.com"
-INVALID_FLAGS = ['<', '[', '作词', '作曲', '编曲', '演唱', 'Mojim']
-DIRTY_CHARS = ['＊', '＃', '.', '&amp;', '*']
+INVALID_FLAGS = ['<', '[', '作词', '作曲', '编曲', '演唱', '监制', '制作人', '监唱', '录音师', '混音', '人声编辑', '主题曲' 'Mojim']
+DIRTY_CHARS = ['＊', '＃', '△', '.', '&amp;', '*']
 
 def write_file(text, singer):
     with open('lyrics/'+ singer +'.txt', 'a+', encoding="utf-8") as f:
@@ -19,7 +19,7 @@ def is_invalid_line(line):
 
 def clean_raw(text):
     for c in DIRTY_CHARS:
-        text.replace(c, '')
+        text = text.replace(c, '')
     return text
 
 def get_lyrics_for_song(song_link):
