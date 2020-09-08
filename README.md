@@ -23,3 +23,7 @@ python ./crawler.py
 
 - Note that this project should only be used for research purpose and not for any profitable usage. Please respect the copyrights of the lyrics.
 - 本项目仅供学习使用，请尊重版权，请勿利用此项目从事商业行为！
+
+## Next things to do
+
+- Enable crawler to get lyrics for any specific aritist.
